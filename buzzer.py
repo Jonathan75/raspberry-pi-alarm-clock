@@ -18,10 +18,11 @@ def still_alarm():
 	else:
 		return (timeout() == False)	
 
-while still_alarm()
+while still_alarm():
 	buzzer.value = 1
 	time.sleep(.5)
 	buzzer.value = 0
-	time.sleep(2)
+	button.wait_for_press(2)
+
 
 
